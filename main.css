@@ -1,0 +1,128 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+/* Reset and basic styling */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: blueviolet;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem 2rem 4rem 2rem;
+}
+
+/* Title and icon section */
+.title-icon {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  width: 3.5rem;
+  margin-left: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Input and add button section */
+.input-add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 20rem;
+}
+
+.input-task {
+  flex: 1;
+  height: 2.5rem;
+  padding-left: 1rem;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(238, 238, 238);
+  outline: none;
+}
+
+.add-button {
+  width: 5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: hsl(19, 100%, 50%);
+  color: white;
+  margin-left: -5rem;
+  z-index: 1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: hsl(19, 100%, 45%);
+}
+
+/* Task item section */
+.list-container {
+  margin-top: 0.9rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  max-width: 100%;
+}
+
+.unchecked {
+  width: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.unchecked:hover {
+  transform: scale(1.2);
+}
+
+.task p {
+  flex: 1;
+  margin-right: 10px;
+  word-wrap: break-word;
+  max-width: 15rem;
+}
+
+.delete-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  transform: scale(1.2);
+}
+
+.red-task {
+  text-decoration: line-through;
+  color: rgb(146, 146, 146);
+}
