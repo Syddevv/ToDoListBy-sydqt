@@ -14,7 +14,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 80vh;
-  background-color: blueviolet;
+  background: rgb(138, 158, 222);
+  background: radial-gradient(
+    circle,
+    rgba(138, 158, 222, 1) 36%,
+    rgba(196, 165, 237, 1) 86%
+  );
 }
 
 .container {
