@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${
               completed ? "checked.png" : "unchecked.png"
             }" class="unchecked" />
-            <p class="task ${completedClass}">miss u baby</p> <!-- Apply completed class -->
+            <p class="task ${completedClass}">${taskName}</p> <!-- Apply completed class -->
             <button class="delete-button"><i class="fa-solid fa-x"></i></button>
           </div>`;
 
@@ -42,7 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let taskList = document.querySelector(".input-task");
     const taskName = taskList.value;
 
-    todoList.push({ taskName, completed: false }); // New task, default as not completed
+    if (taskName === "") {
+      alert("Please input a task");
+    } else {
+      todoList.push({ taskName, completed: false }); // New task, default as not completed
+    }
 
     taskList.value = "";
 
